@@ -1,0 +1,15 @@
+{
+  "name": "Brasa Burger",
+  "url": "https://example.com",
+  "description": "Hambúrgueres artesanais, ingredientes frescos e combinações cheias de personalidade. Explore o cardápio da Brasa Burger e monte seu pedido.",
+  "demo": true,
+  "whatsapp": "",
+  "address": "",
+  "hours": "",
+  "instagram": "",
+  "email": "",
+  "googleVerification": "SEU_CODIGO_AQUI",
+  "ga4Id": "G-XXXXXXXXXX",
+  "clarityId": "SEU_CLARITY_ID",
+  "reviews": []
+}

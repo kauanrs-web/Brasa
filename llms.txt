@@ -1,0 +1,16 @@
+# Brasa Burger
+
+> Conceito demonstrativo. Imagens, preços e depoimentos ilustrativos.
+
+## Navegação
+- [Conheça](https://example.com/#/entrada/sobre-nos): proposta e ingredientes.
+- [Cardápio](https://example.com/#/cardapio): hambúrgueres, batatas, água e refrigerantes, com 25 variações.
+- [Localização](https://example.com/#/localizacao): endereço e horários.
+- [Contato](https://example.com/#/contato): atendimento.
+
+## Informações verificadas
+- Endereço ainda não cadastrado.
+- Horários ainda não cadastrados.
+
+## Precisão
+Não inferir avaliações, endereço, taxas, prazos ou disponibilidade ausentes. Pedidos precisam de confirmação humana. Este arquivo orienta leitura automatizada; não concede direitos de treinamento, não bloqueia robôs e não garante uso por modelos de IA.

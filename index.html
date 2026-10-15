@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16120f">
+  <title>Brasa Burger | Seu próximo hambúrguer favorito</title>
+  <meta name="description" content="Hambúrgueres artesanais, ingredientes frescos e combinações cheias de personalidade. Explore o cardápio da Brasa Burger e monte seu pedido.">
+  <meta name="keywords" content="hamburgueria, hambúrguer artesanal, smash burger, hambúrguer vegetariano, Brasa Burger, cardápio">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="google-site-verification" content="SEU_CODIGO_AQUI">
+  <link rel="canonical" href="https://example.com/">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Brasa Burger | Seu próximo hambúrguer favorito">
+  <meta property="og:description" content="Pão macio, queijo derretido e muito sabor. Sobre nós Burger e escolha o seu.">
+  <meta property="og:image" content="https://example.com/assets/og-brasa.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hambúrguer artesanal Brasa Burger com pão de gergelim, queijo, carne e vegetais">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brasa Burger">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brasa Burger | Seu próximo hambúrguer favorito">
+  <meta name="twitter:description" content="Seu próximo hambúrguer favorito começa aqui. Explore o cardápio da Brasa Burger.">
+  <meta name="twitter:image" content="https://example.com/assets/og-brasa.webp">
+  <meta name="twitter:image:alt" content="Hambúrguer Brasa Burger montado em camadas">
+  <!-- Versão solicitada com Tailwind via CDN. O build de produção remove este script;
+       styles.css já inclui todos os estilos necessários, sem compilação no navegador. -->
+  <script data-tailwind-cdn src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+  <link rel="preload" as="image" href="assets/burger-hero.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Preload do pôster evita atraso visual, mantendo loading=lazy nas imagens. -->
+  <script src="config.js"></script>
+  <script>
+    // GA4 / Google tag (gtag.js). Substitua G-XXXXXXXXXX em site.config.json.
+    // Search Console usa a meta de verificação acima; não há script adicional.
+    // GA4 e Clarity só iniciam após a escolha de cookies e com IDs válidos.
+    window.startAnalytics = function () {
+      if (window.analyticsStarted) return;
+      window.analyticsStarted = true;
+      const c = window.BRASA_CONFIG || {};
+      if (/^G-[A-Z0-9]+$/.test(c.ga4Id || '') && c.ga4Id !== 'G-XXXXXXXXXX') {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', c.ga4Id);
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(c.ga4Id);
+        document.head.appendChild(script);
+      }
+      // Microsoft Clarity: substitua SEU_CLARITY_ID em site.config.json.
+      if (/^[a-z0-9]+$/i.test(c.clarityId || '') && c.clarityId !== 'SEU_CLARITY_ID') {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window,document,'clarity','script',c.clarityId);
+      }
+    };
+  </script>
+  <script type="application/ld+json" id="structured-data">
+  {"@context":"https://schema.org","@type":"Organization","name":"Brasa Burger","description":"Conceito demonstrativo de hamburgueria artesanal.","url":"https://example.com/","logo":"https://example.com/assets/logo.webp","sameAs":[]}
+  </script>
+  <script src="menu.generated.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  
+
+  <header class="site-header" id="topo">
+    <div class="shell header-inner flex items-center justify-between">
+      <a class="brand" href="#/entrada" aria-label="Brasa Burger, início"><span>Brasa Burger</span></a>
+      <nav class="desktop-nav" aria-label="Navegação principal"><a href="#/entrada">Entrada</a><a href="#/entrada/sobre-nos">Sobre nós</a><a href="#/cardapio">Cardápio</a><a href="#/localizacao">Localização</a><a href="#/contato">Contato</a></nav>
+      <div class="header-actions flex items-center gap-3">
+        <a class="button button-small header-cta" href="#/cardapio">Pedir agora </a>
+        <button class="icon-button cart-trigger" aria-label="Abrir sacola, 0 itens">Sacola <span class="cart-count" aria-hidden="true">0</span></button>
+        <button id="menu-toggle" class="icon-button mobile-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação móvel" inert><div><a href="#/entrada">Entrada</a><a href="#/entrada/sobre-nos">Sobre nós</a><a href="#/cardapio">Cardápio</a><a href="#/localizacao">Localização</a><a href="#/contato">Contato</a></div></nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+<div class="page-view" data-view="entrada" id="view-entrada">
+<section id="entrada" class="hero">
+      <div class="shell hero-grid"><div class="hero-copy">
+        <h1 class="intro-in" tabindex="-1">Prove o<br><em>hambúrguer<br>perfeito.</em></h1>
+        <p class="hero-description intro-in">Carne na chapa, cheddar derretido e pão tostado. Escolha seu hambúrguer, acrescente as batatas e prepare a primeira mordida.</p>
+        <div class="hero-actions intro-in"><a class="button" href="#/cardapio">Pedir agora </a><a class="button button-secondary" href="#/cardapio">Ver cardápio</a></div>
+        <div class="hero-section-links"><a href="#/localizacao"> Nossa localização</a><a href="#/contato"> Fale com a gente</a></div>
+      </div>
+        <div class="hero-stage" aria-label="Hambúrguer artesanal inteiro">
+          <picture class="hero-picture"><img id="burger-scene" src="assets/burger-hero.webp" width="1280" height="1269" loading="lazy" decoding="async" alt="Hambúrguer artesanal com pão de gergelim, carne grelhada, cheddar derretido, alface, tomate e cebola roxa"></picture>
+        </div>
+      </div>
+      <a class="entry-story-link" href="#/entrada/sobre-nos">Conheça a Brasa</a>
+    </section>
+<section id="conhecimentos" class="section story-section">
+      <div class="shell story-grid">
+        <div class="story-photo reveal"><picture><source srcset="assets/ingredientes.webp" type="image/webp"><img src="assets/ingredientes.webp" alt="Ingredientes de hambúrguer suspensos em camadas: pão de gergelim, cheddar derretido, carne grelhada, bacon, cebola roxa, tomate e alface" width="736" height="1319" loading="lazy" decoding="async"></picture></div>
+        <div class="story-copy reveal">
+          <h2 class="page-title" id="about-title" tabindex="-1">Sobre nós.<br><em>Fogo, sabor<br>e cuidado.</em></h2>
+          <p>Na Brasa, o hambúrguer vem primeiro: pão tostado, carne na chapa e ingredientes que combinam. Escolha seu favorito e conte como você gosta.</p>
+          <div class="story-tabs" role="tablist" aria-label="Conheça nossa proposta"><button id="tab-sabor" role="tab" aria-selected="true" aria-controls="panel-sabor" tabindex="0">O sabor</button><button id="tab-cuidado" role="tab" aria-selected="false" aria-controls="panel-cuidado" tabindex="-1">O cuidado</button></div>
+          <div class="story-panels"><div id="panel-sabor" role="tabpanel" aria-labelledby="tab-sabor"><h3>Equilíbrio em cada mordida.</h3><p>O tostado do pão, a suculência do hambúrguer e o frescor dos vegetais. Tudo tem seu lugar.</p></div><div id="panel-cuidado" role="tabpanel" aria-labelledby="tab-cuidado" hidden><h3>O seu pedido, do seu jeito.</h3><p>Escolha o favorito e deixe suas preferências nas observações. A equipe confirma as adaptações antes do preparo.</p></div></div>
+          
+          <a href="#/cardapio" class="text-link">Encontre o seu favorito </a>
+        </div>
+      </div>
+    </section>
+<section hidden id="avaliacoes" class="section reviews-section" aria-labelledby="reviews-title"><div class="shell"><div class="section-heading reveal"><div><h2 id="reviews-title">O sabor fica.<br><em>A experiência também.</em></h2></div><p data-review-note>Avaliações de clientes.</p></div><div class="reviews-grid" id="reviews-grid"></div></div></section>
+<section class="section faq-section" aria-labelledby="faq-title"><div class="shell faq-grid"><div class="reveal"><h2 id="faq-title">Ficou alguma<br><em>dúvida?</em></h2><p>Pedidos, ingredientes e formas de pagamento.</p><a href="#/contato" class="text-link">Fale com a Brasa </a></div><div class="faq-list reveal">
+      <div class="faq-item"><h3><button aria-expanded="false" aria-controls="faq-1">Como faço meu pedido?<span class="faq-state" aria-hidden="true">Abrir</span></button></h3><div id="faq-1" class="faq-answer" inert><div><p>Adicione seus itens à sacola, confira as quantidades e informe suas preferências. Ao finalizar, o resumo vai para o WhatsApp da casa. A equipe confirma disponibilidade, valor final e prazo. Nesta demonstração, você pode copiar o resumo sem enviar.</p></div></div></div>
+      <div class="faq-item"><h3><button aria-expanded="false" aria-controls="faq-2">Posso retirar ou receber em casa?<span class="faq-state" aria-hidden="true">Abrir</span></button></h3><div id="faq-2" class="faq-answer" inert><div><p>A sacola permite escolher retirada ou entrega. Região atendida, taxa de entrega e prazo devem ser confirmados com a equipe antes do pagamento.</p></div></div></div>
+      <div class="faq-item"><h3><button aria-expanded="false" aria-controls="faq-3">Tem opção vegetariana?<span class="faq-state" aria-hidden="true">Abrir</span></button></h3><div id="faq-3" class="faq-answer" inert><div><p>O cardápio demonstrativo inclui o Verde Brasa, com grão-de-bico e cogumelos. Ser vegetariano não significa ser vegano ou livre de alergênicos. Consulte ingredientes e condições de preparo com a equipe.</p></div></div></div>
+      <div class="faq-item"><h3><button aria-expanded="false" aria-controls="faq-4">Posso tirar algum ingrediente?<span class="faq-state" aria-hidden="true">Abrir</span></button></h3><div id="faq-4" class="faq-answer" inert><div><p>Sim, você pode indicar a preferência no campo de observações da sacola. Adaptações, possíveis adicionais e restrições alimentares precisam ser confirmados pela equipe.</p></div></div></div>
+      <div class="faq-item"><h3><button aria-expanded="false" aria-controls="faq-5">Quais são as formas de pagamento?<span class="faq-state" aria-hidden="true">Abrir</span></button></h3><div id="faq-5" class="faq-answer" inert><div><p>Informe na sacola se prefere Pix, cartão ou dinheiro. A equipe confirma as opções disponíveis. Nenhum pagamento é processado neste site.</p></div></div></div>
+    </div></div></section>
+</div>
+<div class="page-view" data-view="cardapio" id="view-cardapio" hidden>
+<section id="cardapio" class="section menu-section">
+      <div class="shell">
+        <div class="section-heading reveal"><div><h1 class="page-title" tabindex="-1">Qual é a sua<br><em>fome de hoje?</em></h1></div><p>Hambúrgueres, batatas e bebidas.<br>Monte a combinação que tem a sua cara.</p></div>
+        <div class="menu-toolbar reveal"><div class="filters" role="group" aria-label="Filtrar cardápio"><button class="filter active" data-filter="all" aria-pressed="true">Todos</button><button class="filter" data-filter="burgers" aria-pressed="false">Hambúrgueres</button><button class="filter" data-filter="sides" aria-pressed="false">Batatas</button><button class="filter" data-filter="drinks" aria-pressed="false">Bebidas</button></div><span class="demo-note" data-demo>Cardápio ilustrativo</span></div>
+        <div class="product-grid" id="product-grid">
+        <!-- MENU_START -->
+<article class="product-card reveal" data-category="burgers" data-product-card="classico"><div class="product-visual"><picture><source srcset="assets/classico-400.webp 400w, assets/classico-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/classico-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Hambúrguer artesanal com cheddar, carne bovina, alface, tomate e cebola roxa no pão de gergelim"></picture></div><div class="product-info"><h3>Brasa Clássico</h3><p class="product-description">Pão de gergelim, hambúrguer bovino, cheddar, alface, tomate, cebola roxa e molho da casa.</p><div class="product-variant"><p class="single-variant">180 g de carne</p></div><div class="product-bottom"><strong class="price" data-price>R$ 29,90</strong><button class="add-button" data-add="classico" aria-label="Adicionar Brasa Clássico — 180 g de carne à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="burgers" data-product-card="bacon"><div class="product-visual"><picture><source srcset="assets/bacon-400.webp 400w, assets/bacon-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/bacon-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Duplo smash burger com duas carnes grelhadas, cheddar derretido e bacon crocante no pão brioche"></picture></div><div class="product-info"><h3>Duplo Bacon</h3><p class="product-description">Pão brioche, dois smash burgers, cheddar em dobro, bacon crocante e maionese da casa.</p><div class="product-variant"><p class="single-variant">2 × 90 g de carne</p></div><div class="product-bottom"><strong class="price" data-price>R$ 36,90</strong><button class="add-button" data-add="bacon" aria-label="Adicionar Duplo Bacon — 2 × 90 g de carne à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="burgers" data-product-card="veggie"><div class="product-visual"><picture><source srcset="assets/veggie-400.webp 400w, assets/veggie-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/veggie-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Hambúrguer vegetariano de grão-de-bico e cogumelos com alface, tomate, cebola roxa e molho de ervas"></picture></div><div class="product-info"><h3>Verde Brasa</h3><p class="product-description">Burger de grão-de-bico e cogumelos, folhas frescas, tomate, cebola roxa e molho de ervas.</p><div class="product-variant"><p class="single-variant">Vegetariano</p></div><div class="product-bottom"><strong class="price" data-price>R$ 31,90</strong><button class="add-button" data-add="veggie" aria-label="Adicionar Verde Brasa — Vegetariano à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="sides" data-product-card="batata"><div class="product-visual"><picture><source srcset="assets/batata-400.webp 400w, assets/batata-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/batata-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Porção de batatas fritas finas e douradas servidas em uma bandeja de papel kraft"></picture></div><div class="product-info"><h3>Fritas da Casa</h3><p class="product-description">Batatas fininhas, douradas por fora e macias por dentro. Escolha o tamanho da sua fome.</p><div class="product-variant"><label class="variant-label" for="variant-batata">Escolha a opção</label><select class="variant-select" id="variant-batata" data-product="batata" aria-label="Opção de Fritas da Casa"><option value="batata-p">Pequena · 150 g</option><option value="batata-m">Média · 250 g</option><option value="batata-g">Grande · 400 g</option></select></div><div class="product-bottom"><strong class="price" data-price>R$ 10,90</strong><button class="add-button" data-add="batata-p" aria-label="Adicionar Fritas da Casa — Pequena · 150 g à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="sides" data-product-card="batata-cheddar"><div class="product-visual"><picture><source srcset="assets/batata-cheddar-400.webp 400w, assets/batata-cheddar-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/batata-cheddar-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Batatas fritas cobertas de cheddar cremoso e pedaços de bacon crocante"></picture></div><div class="product-info"><h3>Cheddar &amp; Bacon</h3><p class="product-description">Fritas cobertas com cheddar cremoso e bacon crocante. Uma combinação difícil de resistir.</p><div class="product-variant"><label class="variant-label" for="variant-batata-cheddar">Escolha a opção</label><select class="variant-select" id="variant-batata-cheddar" data-product="batata-cheddar" aria-label="Opção de Cheddar &amp; Bacon"><option value="cheddar-m">Média · 300 g</option><option value="cheddar-g">Grande · 500 g</option></select></div><div class="product-bottom"><strong class="price" data-price>R$ 22,90</strong><button class="add-button" data-add="cheddar-m" aria-label="Adicionar Cheddar &amp; Bacon — Média · 300 g à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="sides" data-product-card="rustica"><div class="product-visual"><picture><source srcset="assets/rustica-400.webp 400w, assets/rustica-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/rustica-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Batatas rústicas com casca, douradas e temperadas com alecrim e sal"></picture></div><div class="product-info"><h3>Rústicas com Ervas</h3><p class="product-description">Gomos de batata com casca, alecrim e uma pitada de sal. Crocância em cada pedaço.</p><div class="product-variant"><label class="variant-label" for="variant-rustica">Escolha a opção</label><select class="variant-select" id="variant-rustica" data-product="rustica" aria-label="Opção de Rústicas com Ervas"><option value="rustica-m">Média · 250 g</option><option value="rustica-g">Grande · 400 g</option></select></div><div class="product-bottom"><strong class="price" data-price>R$ 16,90</strong><button class="add-button" data-add="rustica-m" aria-label="Adicionar Rústicas com Ervas — Média · 250 g à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="drinks" data-product-card="agua"><div class="product-visual"><picture><source srcset="assets/agua-400.webp 400w, assets/agua-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/agua-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Garrafa transparente de água mineral gelada ao lado de um copo de água com gás"></picture></div><div class="product-info"><h3>Água Mineral</h3><p class="product-description">Com ou sem gás, na temperatura certa para acompanhar o seu pedido.</p><div class="product-variant"><label class="variant-label" for="variant-agua">Escolha a opção</label><select class="variant-select" id="variant-agua" data-product="agua" aria-label="Opção de Água Mineral"><option value="agua-sem">Sem gás · 500 ml</option><option value="agua-com">Com gás · 500 ml</option></select></div><div class="product-bottom"><strong class="price" data-price>R$ 5,00</strong><button class="add-button" data-add="agua-sem" aria-label="Adicionar Água Mineral — Sem gás · 500 ml à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="drinks" data-product-card="cola"><div class="product-visual"><picture><source srcset="assets/cola-400.webp 400w, assets/cola-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/cola-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Refrigerante de cola com gelo em um copo ao lado de uma lata vermelha sem marca"></picture></div><div class="product-info"><h3>Refrigerante de Cola</h3><p class="product-description">O par clássico do hambúrguer. Escolha a versão e o tamanho para acompanhar.</p><div class="product-variant"><label class="variant-label" for="variant-cola">Escolha a opção</label><select class="variant-select" id="variant-cola" data-product="cola" aria-label="Opção de Refrigerante de Cola"><option value="cola-lata">Tradicional · 350 ml</option><option value="cola-zero-lata">Zero açúcar · 350 ml</option><option value="cola-600">Tradicional · 600 ml</option><option value="cola-zero-600">Zero açúcar · 600 ml</option><option value="cola-2l">Tradicional · 2 litros</option><option value="cola-zero-2l">Zero açúcar · 2 litros</option></select></div><div class="product-bottom"><strong class="price" data-price>R$ 8,00</strong><button class="add-button" data-add="cola-lata" aria-label="Adicionar Refrigerante de Cola — Tradicional · 350 ml à sacola"><span>Adicionar</span></button></div></div></article>
+<article class="product-card reveal" data-category="drinks" data-product-card="refrigerantes"><div class="product-visual"><picture><source srcset="assets/refrigerantes-400.webp 400w, assets/refrigerantes-724.webp 724w" sizes="(max-width: 639px) 90vw, (max-width: 1000px) 45vw, 30vw" type="image/webp"><img src="assets/refrigerantes-724.webp" width="724" height="724" loading="lazy" decoding="async" alt="Copos gelados de refrigerante de guaraná e de limão, com gelo, ao lado de uma lata verde"></picture></div><div class="product-info"><h3>Guaraná &amp; Limão</h3><p class="product-description">Guaraná ou limão, tradicional ou zero. Uma escolha refrescante para completar o pedido.</p><div class="product-variant"><label class="variant-label" for="variant-refrigerantes">Escolha a opção</label><select class="variant-select" id="variant-refrigerantes" data-product="refrigerantes" aria-label="Opção de Guaraná &amp; Limão"><option value="guarana-lata">Guaraná · 350 ml</option><option value="guarana-zero">Guaraná zero · 350 ml</option><option value="guarana-600">Guaraná · 600 ml</option><option value="guarana-2l">Guaraná · 2 litros</option><option value="limao-lata">Limão · 350 ml</option><option value="limao-zero">Limão zero · 350 ml</option><option value="limao-2l">Limão · 2 litros</option></select></div><div class="product-bottom"><strong class="price" data-price>R$ 8,00</strong><button class="add-button" data-add="guarana-lata" aria-label="Adicionar Guaraná &amp; Limão — Guaraná · 350 ml à sacola"><span>Adicionar</span></button></div></div></article>
+<!-- MENU_END -->
+        </div>
+        <p class="menu-footnote">Tem alguma restrição alimentar? Consulte a equipe antes de pedir. Ingredientes e adaptações dependem de confirmação.</p>
+      </div>
+    </section>
+</div>
+<div class="page-view" data-view="localizacao" id="view-localizacao" hidden>
+<section id="localizacao" class="section location-section"><div class="shell location-grid"><div class="reveal"><h1 class="page-title" tabindex="-1">Seu próximo<br><em>ponto de encontro.</em></h1><p>Uma pausa na rotina. Uma boa conversa.<br>E um burger para acompanhar.</p><div class="location-detail"><div><h3>Onde encontrar a Brasa</h3><p id="location-address">Endereço a ser divulgado.</p></div></div><div class="location-detail"><div><h3>Quando a fome bater</h3><p id="location-hours">Horários a serem divulgados.</p></div></div><button class="button button-outline" id="directions-button">Consultar localização </button></div><div class="location-art reveal"><div class="map-grid" aria-hidden="true"><i></i><i></i><i></i></div><div class="map-center"><strong>Nos vemos na Brasa.</strong><span id="map-caption">Nossa localização, em breve.</span></div><span class="map-disclaimer">Representação ilustrativa</span></div></div></section>
+</div>
+<div class="page-view" data-view="contato" id="view-contato" hidden>
+<section id="contato" class="contact-section"><div class="shell contact-inner reveal"><div><h1 class="page-title" tabindex="-1">Vamos<br><em>conversar?</em></h1><p>Peça uma sugestão, tire uma dúvida ou escolha seu favorito.</p></div><button class="button button-dark" data-contact> Conversar no WhatsApp </button></div><div class="shell contact-options"><a href="#/cardapio" class="contact-option"><h3>Já sabe o que pedir?</h3><p>Escolha seu burger, suas batatas e sua bebida.</p><span class="text-link">Abrir cardápio </span></a><a href="#/localizacao" class="contact-option"><h3>Vem encontrar a gente?</h3><p>Veja o endereço e os horários de atendimento.</p><span class="text-link">Ver localização </span></a></div></section>
+</div>
+</main>
+<p class="sr-only" id="route-status" role="status" aria-live="polite"></p>
+  <footer><div class="shell footer-top"><a class="brand" href="#/entrada"><span>Brasa Burger</span></a><p>Hambúrgueres, batatas e bebidas.</p><nav aria-label="Links do rodapé"><a href="#/cardapio">Cardápio</a><a href="#/localizacao">Localização</a><a href="#/contato">Contato</a></nav><a class="icon-button" id="instagram-link" aria-label="Instagram da Brasa Burger" hidden>Instagram</a></div><div class="shell footer-bottom"><span>© <span id="year">2026</span> Brasa Burger. <span data-demo>Marca demonstrativa.</span></span><span data-demo>Imagens e preços ilustrativos.</span><div><button class="footer-link" id="privacy-button">Privacidade</button><button class="footer-link" id="cookies-button">Cookies</button><button class="footer-link" id="motion-toggle" aria-pressed="false">Pausar animações</button></div></div></footer>
+
+  <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"><div class="dialog-content"><div class="dialog-head"><div><h2 id="cart-title">Sua sacola<span>.</span></h2></div><button class="icon-button" data-close aria-label="Fechar sacola">Fechar</button></div><div id="cart-items"></div><form id="checkout-form" data-clarity-mask="true"><div class="cart-total"><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div><p class="small-copy">Entrega e eventuais adicionais são confirmados pela equipe.</p><label>Seu nome<input name="name" autocomplete="given-name" maxlength="80" placeholder="Como podemos chamar você?" required></label><fieldset><legend>Como você prefere?</legend><div class="radio-options"><label><input type="radio" name="fulfillment" value="Retirada" checked> Retirada</label><label><input type="radio" name="fulfillment" value="Entrega"> Entrega</label></div></fieldset><label id="address-field" hidden>Endereço para entrega<input name="address" autocomplete="street-address" maxlength="240" placeholder="Rua, número, bairro e complemento"></label><label>Preferência de pagamento<select name="payment"><option>Pix</option><option>Cartão</option><option>Dinheiro</option><option>Confirmar com a equipe</option></select></label><label>Alguma observação?<textarea name="notes" rows="2" maxlength="400" placeholder="Ex.: sem cebola. Restrições precisam de confirmação."></textarea></label><button class="button full-width" id="checkout-button" type="submit"><span>Finalizar no WhatsApp</span></button><p id="checkout-demo-note" class="small-copy" data-demo>Demonstração: o resumo pode ser copiado. Nenhum pedido será enviado.</p></form></div></dialog>
+  <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"><div class="dialog-content"><div class="dialog-head"><h2 id="info-title">Brasa Burger</h2><button class="icon-button" data-close aria-label="Fechar mensagem">Fechar</button></div><p id="info-text"></p><textarea id="order-summary" readonly hidden aria-label="Resumo do pedido"></textarea><button class="button" id="copy-summary" hidden>Copiar resumo </button></div></dialog>
+  <aside id="cookie-banner" class="cookie-banner" aria-label="Preferências de cookies" hidden><div><strong>Sua privacidade importa.</strong><p>Você escolhe se permite ferramentas de análise para melhorar a experiência.</p></div><div class="cookie-actions"><button class="button button-small button-outline" data-consent="denied">Só essenciais</button><button class="button button-small" data-consent="granted">Permitir análise</button></div></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-note">Para montar a sacola, escolher variações e usar os filtros, ative o JavaScript. A navegação entre telas também precisa de JavaScript.</div></noscript>
+</body>
+</html>
+<!-- ARQUIVOS TÉCNICOS: salve também separadamente. O build atualiza o domínio.
+
+robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://example.com/sitemap.xml
+
+sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+</urlset>
+
+llms.txt
+# Brasa Burger
+> Conceito demonstrativo de hamburgueria artesanal. Dados e preços ilustrativos.
+## Navegação
+- [Conheça](https://example.com/#/entrada/sobre-nos): proposta e ingredientes.
+- [Cardápio](https://example.com/#/cardapio): clássicos, smash e vegetariano.
+- [Localização](https://example.com/#/localizacao): endereço e horários, quando cadastrados.
+- [Contato](https://example.com/#/contato): canal de atendimento, quando cadastrado.
+## Precisão
+Não inferir endereço, avaliações, horários ou disponibilidade ausentes.
+O arquivo auxilia leitura automatizada; não controla treinamento nem garante indexação.
+-->
